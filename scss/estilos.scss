@@ -1,0 +1,14 @@
+/*-------------------- For everything --------------------*/
+*{
+    margin: 0;
+    padding: 0;
+}
+@import "base/maps";
+@import "base/extends";
+
+@import "components/header";
+@import "components/main";
+@import "components/footer";
+
+@import "base/mediaqueries";
+@import "base/animations";

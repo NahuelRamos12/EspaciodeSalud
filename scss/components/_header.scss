@@ -1,0 +1,70 @@
+/*---------------------- Body Header ----------------------*/
+.gridHeader{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 100%;
+    .titleIndex{
+        display: flex;
+        justify-content: center;
+        .aLogoIndex{
+            transition: 0.5s;
+            .imgLogoIndex{
+                margin: 20px 0;
+                width: 375px;
+                height: 150px;
+                animation-name: welcome;
+                animation-iteration-count: initial;
+                animation-duration: 1.7s;
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+        }    
+    }
+    .titlePages{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .divTitle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: map-get($map: $color, $key: main-color);
+            width: 100%;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            animation-name: swipe;
+            animation-iteration-count: initial;
+            animation-duration: 2s;
+            .h1Title{
+                margin: 10px;
+                color: map-get($map: $standard, $key: color);
+                font-family: map-get($map: $standard, $key: font-family);
+                font-size: map-get($map: $standard, $key: font);
+            }
+        }
+        .divImgPages{
+            .imgLogoPages{
+                margin: 20px 50px;
+                width: 250px;
+                height: 100px;
+                animation-name: heart;
+                animation-iteration-count: infinite;
+                animation-duration: 1.5s;
+                animation-direction: alternate;
+            }
+        }
+    }
+    nav{
+        ul{
+            li{
+                .nav-link{
+                    text-decoration: none;
+                    font-family: map-get($map: $standard, $key: font-family);
+                    font-size: map-get($map: $standard, $key: font);
+                    color: map-get($map: $color, $key: main-color);
+                }
+            }
+        }    
+    }
+}
