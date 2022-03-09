@@ -4,6 +4,12 @@
   padding: 0; }
 
 /*------------ SacarTurno Main ------------*/
+.gridMainSacarTurno .turnOdontologia, .gridMainSacarTurno .turnPsicologia, .gridMainSacarTurno .turnNutricionista {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  align-items: center; }
+
 .gridMainSacarTurno .turnOdontologia .divImgMain, .gridMainSacarTurno .turnPsicologia .divImgMain, .gridMainSacarTurno .turnNutricionista .divImgMain {
   display: flex;
   justify-content: center;
@@ -17,7 +23,7 @@
 .gridMainSacarTurno .turnOdontologia .formMain, .gridMainSacarTurno .turnPsicologia .formMain, .gridMainSacarTurno .turnNutricionista .formMain {
   display: grid;
   grid-template-rows: 40px 50px 50px 50px;
-  grid-template-columns: auto auto;
+  grid-template-columns: 140px 140px;
   margin: 25px 25px 25px 0;
   justify-content: center;
   align-items: center;
@@ -44,6 +50,10 @@
   border-radius: 5px;
   padding: 0 5px; }
 
+.gridMainSacarTurno .turnOdontologia .formMain div .submit, .gridMainSacarTurno .turnPsicologia .formMain div .submit, .gridMainSacarTurno .turnNutricionista .formMain div .submit {
+  color: white;
+  background-color: #1974b4; }
+
 /*------------ Emergency div ------------*/
 .gridMainIndex .emergenciaMain, .gridMainSacarTurno .emergenciaMain, .gridMainNosotros .emergenciaMain, .gridMainMap .emergenciaMain, .gridMainContacto .emergenciaMain {
   display: grid;
@@ -61,6 +71,17 @@
   font-family: var(--bs-body-font-family);
   font-size: x-large; }
 
+/*------------ Schedule div ------------*/
+.gridMainIndex .schedule, .gridMainSacarTurno .schedule, .gridMainMap .schedule, .gridMainContacto .schedule {
+  background-color: #05a39b;
+  display: grid;
+  grid-template-rows: 50px 100px;
+  grid-template-columns: 100%;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-family: var(--bs-body-font-family); }
+
 /*------------ Nosotros main ------------*/
 .gridMainNosotros .pNosotros p, .gridMainNosotros .mision_vision .mision, .gridMainNosotros .mision_vision .vision {
   text-align: center;
@@ -73,14 +94,6 @@
   font-size: x-large;
   font-weight: bold;
   font-family: var(--bs-body-font-family); }
-
-/*------------ Footer ------------*/
-footer .insurances .ospesm, footer .insurances .osdelacaja {
-  display: flex;
-  flex-direction: row;
-  column-gap: 10px;
-  align-items: center;
-  justify-content: center; }
 
 /*---------------------- Body Header ----------------------*/
 .gridHeader {
@@ -123,7 +136,7 @@ footer .insurances .ospesm, footer .insurances .osdelacaja {
         font-size: large; }
     .gridHeader .titlePages .divImgPages .imgLogoPages {
       margin: 20px 50px;
-      width: 250px;
+      width: 270px;
       height: 100px;
       animation-name: heart;
       animation-iteration-count: infinite;
@@ -155,7 +168,7 @@ main {
   .gridMainIndex .buttonsMain {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: auto; }
+    grid-template-rows: 100px; }
     .gridMainIndex .buttonsMain .hMain {
       display: flex;
       justify-content: center;
@@ -163,14 +176,14 @@ main {
       background-color: #05a39b;
       height: 100px;
       border: 1px solid white;
-      transition: 0.5s;
       font-family: var(--bs-body-font-family);
       font-size: x-large; }
       .gridMainIndex .buttonsMain .hMain .aMain {
         text-decoration: none;
-        color: white; }
-      .gridMainIndex .buttonsMain .hMain:hover {
-        transform: scale(1.2); }
+        color: white;
+        transition: 0.5s; }
+        .gridMainIndex .buttonsMain .hMain .aMain:hover {
+          transform: scale(1.3); }
   .gridMainIndex .whyUs {
     margin: 20px; }
     .gridMainIndex .whyUs .whyUsTitle {
@@ -189,26 +202,47 @@ main {
         font-weight: bold; }
       .gridMainIndex .whyUs .whyUsParagraphs div .paragraphs {
         font-family: roboto; }
+  .gridMainIndex .schedule h4 {
+    margin-top: 25px; }
+  .gridMainIndex .insurances {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25px 60px;
+    row-gap: 10px;
+    margin: 20px 0;
+    text-align: center;
+    font-family: var(--bs-body-font-family);
+    font-size: large; }
+    .gridMainIndex .insurances .insurancesRow {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      column-gap: 20px; }
+      .gridMainIndex .insurances .insurancesRow .ospe {
+        height: 55px;
+        width: 200px; }
+      .gridMainIndex .insurances .insurancesRow .sm {
+        height: 40px;
+        width: 200px; }
+      .gridMainIndex .insurances .insurancesRow .osde {
+        height: 40px;
+        width: 100px; }
+      .gridMainIndex .insurances .insurancesRow .lacaja {
+        height: 40px;
+        width: 155px; }
 
 /*------------------- Sacar Turno -------------------*/
 .gridMainSacarTurno {
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   grid-template-columns: 100%; }
-  .gridMainSacarTurno .turnOdontologia {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto; }
+  .gridMainSacarTurno .schedule h4 {
+    margin-top: 25px; }
   .gridMainSacarTurno .turnPsicologia {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
     border-top: solid 5px #1974b4;
     border-bottom: solid 5px #1974b4; }
   .gridMainSacarTurno .turnNutricionista {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
     border-bottom: solid 5px #1974b4; }
 
 /*------------------- Nosotros -------------------*/
@@ -239,6 +273,9 @@ main {
   justify-content: center; }
 
 /*------------------- Ubicacion -------------------*/
+.gridMainMap .schedule h4 {
+  margin-top: 25px; }
+
 .gridMainMap .pMap {
   margin: 30px 0;
   text-align: center;
@@ -246,11 +283,14 @@ main {
   font-size: large; }
 
 .gridMainMap div .googleMap {
-  height: 550px; }
+  height: 550px;
+  margin-bottom: 30px; }
 
 /*------------------- Contacto -------------------*/
 .gridMainContacto {
   margin-bottom: 50px; }
+  .gridMainContacto .schedule h4 {
+    margin-top: 25px; }
   .gridMainContacto .formulario {
     height: 450px;
     border-top: 20px solid #1974b4;
@@ -281,44 +321,49 @@ main {
 /*---------------------- Body Footer ----------------------*/
 footer {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 50% 50%;
   grid-template-rows: auto;
-  margin: 30px 0;
   background-color: #1974b4;
   color: white;
-  font-size: small; }
-  footer .information {
-    margin: 14px 50px; }
-    footer .information .hinformation {
-      margin: 2px; }
-  footer .social {
-    display: flex;
-    flex-direction: row; }
-    footer .social .hSocial {
+  font-size: small;
+  font-family: roboto; }
+  footer .whatsapp {
+    display: grid;
+    grid-template-columns: 165px 75px;
+    align-items: center;
+    justify-content: center; }
+    footer .whatsapp .hSocial {
       margin: 40px 0; }
-    footer .social .whatsapp {
+    footer .whatsapp .whatsapp {
       margin: 30px 0;
       width: 70px;
       height: 40px;
       transition: 0.5s; }
-      footer .social .whatsapp:hover {
+      footer .whatsapp .whatsapp:hover {
         transform: scale(1.3); }
-  footer .insurances {
-    margin: 20px 0; }
-    footer .insurances .ospesm {
-      margin-bottom: 10px; }
-      footer .insurances .ospesm .ospe {
+  footer .information {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    footer .information .info {
+      display: grid;
+      grid-template-columns: 45px 250px; }
+      footer .information .info .hEmail {
+        margin-top: 10px; }
+      footer .information .info .emailIcon {
         height: 40px;
-        width: 34px; }
-      footer .insurances .ospesm .sm {
-        height: 20px;
-        width: 110px; }
-    footer .insurances .osdelacaja .osde {
-      height: 30px;
-      width: 70px; }
-    footer .insurances .osdelacaja .lacaja {
-      height: 35px;
-      width: 120px; }
+        width: 40px; }
+      footer .information .info .telIcon {
+        height: 17px;
+        width: 18px;
+        margin-left: 17px; }
+      footer .information .info .locationIcon {
+        margin-left: 18px;
+        height: 15px;
+        width: 15px; }
 
 /*--------------------- @media queries ---------------------*/
 /*---------- Logo of the Index ----------*/
@@ -344,12 +389,24 @@ footer {
   .gridHeader nav ul li .nav-link {
     font-size: 13px; } }
 
+@media (max-width: 400px) {
+  .gridHeader nav ul li .nav-link {
+    font-size: 11px; } }
+
 /*---------- Index why us ----------*/
 @media (max-width: 700px) {
   .gridMainIndex .whyUs .whyUsTitle {
     font-size: large; }
   .gridMainIndex .whyUs .whyUsParagraphs {
     grid-template-columns: none; } }
+
+/*---------- Index insurances ----------*/
+@media (max-width: 750px) {
+  .gridMainIndex .insurances {
+    grid-template-rows: 25px 210px; }
+    .gridMainIndex .insurances .insurancesRow {
+      flex-direction: column;
+      row-gap: 10px; } }
 
 /*------ Index and Pages, div Emergency and div buttons ------*/
 @media (max-width: 640px) {
@@ -399,10 +456,7 @@ footer {
     .gridMainContacto .emergenciaMain .pEmergencia {
       font-size: medium; }
   .gridMainIndex .buttonsMain .hMain {
-    font-size: medium; }
-  .gridMainIndex .buttonsMain .hMain {
-    font-size: small;
-    height: 80px; } }
+    font-size: medium; } }
 
 @media (max-width: 400px) {
   .gridMainIndex .emergenciaMain {
@@ -424,7 +478,10 @@ footer {
   .gridMainContacto .emergenciaMain {
     column-gap: 10px; }
     .gridMainContacto .emergenciaMain .pEmergencia {
-      font-size: small; } }
+      font-size: small; }
+  .gridMainIndex .buttonsMain .hMain {
+    font-size: small;
+    height: 80px; } }
 
 /*---------- Pages titles ----------*/
 @media (max-width: 600px) {
@@ -434,7 +491,10 @@ footer {
     .gridHeader .titlePages .divTitle {
       margin-top: 20px;
       border-top-right-radius: 0px;
-      border-bottom-right-radius: 0px; } }
+      border-bottom-right-radius: 0px; }
+    .gridHeader .titlePages .divImgPages .imgLogoPages {
+      width: 200px;
+      height: 80px; } }
 
 /*-------- Main of Sacar Turno --------*/
 @media (max-width: 1000px) {
@@ -505,12 +565,7 @@ footer {
 @media (max-width: 700px) {
   footer {
     grid-template-columns: 100%;
-    grid-template-rows: auto auto auto; }
-    footer .information {
-      margin-top: 14px;
-      text-align: center; }
-    footer .social {
-      justify-content: center; } }
+    grid-template-rows: auto auto; } }
 
 /*---------------------- Animations ----------------------*/
 /*---- Index ----*/

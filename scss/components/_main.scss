@@ -32,23 +32,23 @@ main{
     .buttonsMain{
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: auto;
+        grid-template-rows: 100px;
         .hMain{
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: map-get($map: $color, $key: secondary-color);
             height: 100px;
-            border: 1px solid map-get($map: $standard, $key: color);
-            transition: 0.5s;
+            border: 1px solid map-get($map: $standard, $key: color); 
             font-family: var(--bs-body-font-family);
             font-size: x-large;
             .aMain{
                 text-decoration: none;
                 color: map-get($map: $standard, $key: color);
-            }
-            &:hover{
-                transform: scale(1.2);
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(1.3);
+                }
             }
         }
     }
@@ -77,16 +77,59 @@ main{
             }
         }
     }
+    .schedule{
+        @extend %schedule;
+        h4{
+            margin-top: 25px;
+        }
+    }
+    .insurances{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 25px 60px;
+        row-gap: 10px;
+        margin: 20px 0;
+        text-align: center;
+        font-family: var(--bs-body-font-family);
+        font-size: large;
+        .insurancesRow{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            column-gap: 20px;
+            .ospe{
+                height: 55px;
+                width: 200px;
+            }
+            .sm{
+                height: 40px;
+                width: 200px;
+            }
+            .osde{
+                height: 40px;
+                width: 100px;
+            }
+            .lacaja{
+                height: 40px;
+                width: 155px;
+            }
+        }
+    }    
 }
 /*------------------- Sacar Turno -------------------*/
 .gridMainSacarTurno{
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-columns: 100%;
+    .schedule{
+        @extend %schedule;
+        h4{
+            margin-top: 25px;
+        }
+    }
     .turnOdontologia{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: auto;
+        @extend %turnosRows;
         .divImgMain{
             @extend %div-img;
             .imgOdontologia{
@@ -107,13 +150,14 @@ main{
                 .input{
                     @extend %form-input;
                 }
+                .submit{
+                    @extend %form-submit;
+                }
             }
         }
     }
     .turnPsicologia{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: auto;
+        @extend %turnosRows;
         border-top: solid 5px map-get($map: $color, $key: main-color);
         border-bottom: solid 5px map-get($map: $color, $key: main-color);
         .divImgMain{
@@ -136,13 +180,14 @@ main{
                 .input{
                     @extend %form-input;
                 }
+                .submit{
+                    @extend %form-submit;
+                }
             }
         }
     }
     .turnNutricionista{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: auto;
+        @extend %turnosRows;
         border-bottom: solid 5px map-get($map: $color, $key: main-color);
         .divImgMain{
             @extend %div-img;
@@ -163,6 +208,9 @@ main{
             div{
                 .input{
                     @extend %form-input;
+                }
+                .submit{
+                    @extend %form-submit;
                 }
             }
         }
@@ -231,6 +279,12 @@ main{
 }
 /*------------------- Ubicacion -------------------*/
 .gridMainMap{
+    .schedule{
+        @extend %schedule;
+        h4{
+            margin-top: 25px;
+        }
+    }
     .emergenciaMain{
         @extend %emergency;
         .pEmergencia{
@@ -246,12 +300,19 @@ main{
     div{
         .googleMap{
             height: 550px;
+            margin-bottom: 30px;
         }
     }
 }
 /*------------------- Contacto -------------------*/
 .gridMainContacto{
     margin-bottom: 50px;
+    .schedule{
+        @extend %schedule;
+        h4{
+            margin-top: 25px;
+        }
+    }
     .emergenciaMain{
         @extend %emergency;
         .pEmergencia{
