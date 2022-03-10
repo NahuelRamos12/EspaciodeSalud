@@ -39,6 +39,7 @@ footer{
                 margin-top: 10px;
             }
             .hTel{
+                color: map-get($map: $standard, $key: color);
                 text-decoration: none;
             }
             .emailIcon{

@@ -355,6 +355,7 @@ footer {
       footer .information .info .hEmail {
         margin-top: 10px; }
       footer .information .info .hTel {
+        color: white;
         text-decoration: none; }
       footer .information .info .emailIcon {
         height: 40px;
