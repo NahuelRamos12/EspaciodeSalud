@@ -63,6 +63,7 @@
 %emergency-text{
     color: map-get($map: $standard, $key: text);
     text-align: center;
+    text-decoration: none;
     margin: 20px 0;
     font-family: var(--bs-body-font-family);
     font-size: x-large;

@@ -67,6 +67,7 @@
 .gridMainIndex .emergenciaMain .pEmergencia, .gridMainSacarTurno .emergenciaMain .pEmergencia, .gridMainNosotros .emergenciaMain .pEmergencia, .gridMainMap .emergenciaMain .pEmergencia, .gridMainContacto .emergenciaMain .pEmergencia {
   color: black;
   text-align: center;
+  text-decoration: none;
   margin: 20px 0;
   font-family: var(--bs-body-font-family);
   font-size: x-large; }
@@ -353,6 +354,8 @@ footer {
       grid-template-columns: 45px 250px; }
       footer .information .info .hEmail {
         margin-top: 10px; }
+      footer .information .info .hTel {
+        text-decoration: none; }
       footer .information .info .emailIcon {
         height: 40px;
         width: 40px; }
